@@ -1,0 +1,25 @@
+1. Created a CloudFormation template that builds IAM roles with policies & tags.
+ 
+2. Tested the CFN template by deploying a test stack to ensure it works.
+ 
+3. Created a Service Catalog Portfolio in the root account.
+ 
+4. Created a Product using the CFN template (uploaded locally).
+ 
+5. Added the Product to the Portfolio so it becomes accessible through that portfolio.
+ 
+6. Created an SC-Launch-Role (Launch Constraint Role) that Service Catalog uses to deploy stacks.
+ 
+7. Updated SC-Launch-Role IAM policy to include CloudFormation + IAM + S3 permissions needed for product launches.
+ 
+8. Added Trust Policy so Service Catalog can assume SC-Launch-Role.
+ 
+9. Created a Launch Constraint inside the Portfolio linking the product to SC-Launch-Role.
+ 
+10. Granted Portfolio access to an IAM User (NewUser) so they can view and launch the product.
+ 
+11. Logged in as IAM User using AWS CLI to verify identity and permissions.
+ 
+12. Fixed missing S3 permissions because Service Catalog internally stores artifacts in S3 even if uploaded locally.
+ 
+13. Successfully launched the product from the IAM user account with no further permission errors.
