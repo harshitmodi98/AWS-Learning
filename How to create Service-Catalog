@@ -23,3 +23,5 @@
 12. Fixed missing S3 permissions because Service Catalog internally stores artifacts in S3 even if uploaded locally.
  
 13. Successfully launched the product from the IAM user account with no further permission errors.
+
+14. We will create portfolio to group the things like we will attach the product to portfolio, mention the constraint whether we use the product for launch or stacksets or tag update , etc... and whom should be having access to launch the product
